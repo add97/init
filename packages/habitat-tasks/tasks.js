@@ -10,6 +10,7 @@ if (Meteor.isServer) {
        { owner: this.userId },
      ],
     };
+    debugger;
     // modifiers = {
     //   limit: 100,
     //   // sort: {
@@ -41,13 +42,12 @@ Tasks.methods = {
   }).validator(),
   run({ text }) {
     console.log(text)
-    debugger;
     Tasks.insert({
       text: text,
       createdAt: new Date(),
       owner: Meteor.userId(),
       username: Meteor.user().username,
-      private: false,
+  //    private: false,
     }, (err, id) => { if(err) { throw new Meteor.Error(err.message); } else {
         if(Meteor.isServer){
           Tasks.update(id, {$set: {

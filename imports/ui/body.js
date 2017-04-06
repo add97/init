@@ -7,7 +7,6 @@ import './body.html';
 
 Template.body.onCreated(function bodyOnCreated() {
   this.state = new ReactiveDict();
-  debugger;
   Meteor.subscribe('tasks');
 });
 
@@ -16,15 +15,12 @@ Template.body.helpers({
     const instance = Template.instance();
     if (instance.state.get('hideCompleted')) {
       // If hide completed is checked, filter tasks
-      debugger;
       return Tasks.find({ checked: { $ne: true } }, { sort: { createdAt: -1 } });
     }
     // Otherwise, return all of the tasks
-    debugger;
     return Tasks.find({}, { sort: { createdAt: -1 } });
   },
   incompleteCount() {
-    debugger;
     return Tasks.find({ checked: { $ne: true } }).count();
   },
 });

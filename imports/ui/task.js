@@ -5,7 +5,6 @@ import './task.html';
 
 Template.task.helpers({
   isOwner() {
-    debugger;
     return this.owner === Meteor.userId();
   },
 });
