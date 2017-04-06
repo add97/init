@@ -21,3 +21,9 @@ reactive-dict
 accounts-ui
 accounts-password
 practicalmeteor:mocha
+tunifight:loggedin-mixin
+mdg:validated-method
+aldeed:simple-schema
+habitat-tasks
+random
+matteodem:easy-search

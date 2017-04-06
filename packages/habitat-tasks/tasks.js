@@ -1,38 +1,69 @@
-import { meteor } from 'meteor/meteor';
-import { Mongo } from 'meteor/mongo';
-import { check } from 'meteor/check';
-
-export const Tasks = new Mongo.Collection('tasks');
+Tasks = new Mongo.Collection('tasks');
 
 if (Meteor.isServer) {
   // This code only runs on the server
   // Only publish tasks that are public or belong to the current user
-  Meteor.publish('tasks', function tasksPublication() {
-    return Tasks.find({
+  Meteor.publish('tasks', () => {
+    query = {
      $or: [
        { private: { $ne: true } },
        { owner: this.userId },
      ],
-   });
+    };
+    // modifiers = {
+    //   limit: 100,
+    //   // sort: {
+    //   //   createdAt: -1,
+    //   // },
+    //   fields: {
+    //     username: 1,
+    //     text: 1,
+    //     private: 1,
+    //     owner: 1,
+    //     checked: 1,
+    //   },
+    // }
+    return Tasks.find(query);
   });
 }
 
-Meteor.methods({
-  'tasks.insert'(text) {
-    check(text, String);
-
-    // Make sure the user is logged in before inserting a task
-    if (! Meteor.userId()) {
-      throw new Meteor.Error('not-authorized');
-    }
-
+Tasks.methods = {
+  insert: new ValidatedMethod({
+  name: 'Tasks.methods.insert',
+  mixins : [LoggedInMixin],
+  checkLoggedInError: {
+    error: 'notLogged',
+    message: 'You need to be logged in to call this method',
+    reason: 'You need to login'
+  },
+  validate: new SimpleSchema({
+    text: { type: String, min: 3, }
+  }).validator(),
+  run({ text }) {
+    console.log(text)
+    debugger;
     Tasks.insert({
-      text,
+      text: text,
       createdAt: new Date(),
       owner: Meteor.userId(),
       username: Meteor.user().username,
+      private: false,
+    }, (err, id) => { if(err) { throw new Meteor.Error(err.message); } else {
+        if(Meteor.isServer){
+          Tasks.update(id, {$set: {
+            key: getKey(text),
+          }}, (err, num) => {
+            if(err) { console.warn(err.message);
+          }})
+        }
+        console.log(`you just inserted ${id}`);
+      }
     });
-  },
+  }
+}),
+};
+
+Meteor.methods({
   'tasks.remove'(taskId) {
     check(taskId, String);
 
@@ -67,6 +98,8 @@ Meteor.methods({
       throw new Meteor.Error('not-authorized');
     }
 
-    Tasks.update(taskId, { $set: { private: setToPrivate } });
+    Tasks.update(taskId, { $set: { private: setToPrivate } }, (err) => {
+      if(err) {console.warn(err.message); }
+    });
   },
 });
