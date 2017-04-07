@@ -3,7 +3,37 @@ import { Template } from 'meteor/templating';
 
 import './task.html';
 
-Router.route('/register');
+Router.route('/', {
+  name: 'home',
+  template: 'home'
+});
+Router.route('/register', {
+  name: 'register',
+  template: 'register'
+});
+Router.route('/login', {
+  name: 'login',
+  template: 'login'
+});
+
+Lists = new Meteor.Collection('lists');
+
+Template.addList.events({
+    'submit form': function(event){
+      event.preventDefault();
+      var listName = $('[name=listName]').val();
+      Lists.insert({
+          name: listName
+      });
+      $('[name=listName]').val('');
+    }
+});
+
+Template.lists.helpers({
+    'list': function(){
+        return Lists.find({}, {sort: {name: 1}});
+    }
+});
 
 Template.task.helpers({
   isOwner() {
