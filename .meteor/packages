@@ -25,7 +25,6 @@ tunifight:loggedin-mixin
 mdg:validated-method
 aldeed:simple-schema
 aldeed:collection2
-habitat-tasks
 random
 
 app-state
@@ -39,6 +38,7 @@ habitat-categories
 habitat-featured
 habitat-habitats
 habitat-promos
+habitat-tasks
 habitat-settings
 habitat-support
 habitat-transactions

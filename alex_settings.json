@@ -1,0 +1,53 @@
+{
+    "public": {
+        "mapboxKey": "pk.eyJ1IjoiaGFiaXRhdG1pa2UiLCJhIjoiY2lsdHVpMWQxMDBjdnVza3NyNnV6Y3N3NCJ9.dWupCOy48vAo8BocejIdtg",
+        "phone": "2015645379",
+        "uploadcare":{
+          "public_key":"16be4cd135fb85ecd511",
+          "images_only": true,
+          "locale": "es",
+          "cdn_base": "https://ucarecdn.com/"
+        },
+        "ga": {
+            "id": "w6P9cKQFiRkYcarG2370iZLbJAc4RVDQ"
+        },
+        "persistent_session": {
+            "default_method": "persistent"
+        },
+        "braintree": {
+            "BT_MERCHANT_ID": "nrqc9pcqt9s9drgz"
+        },
+        "devMode": true,
+        "devEmail": "mike@tryhabitat.com",
+        "env": "development"
+    },
+    "stagingMode": false,
+    "devMode": true,
+    "modulusTime": false,
+    "inspectorMode": false,
+    "braintree": {
+        "BT_PUBLIC_KEY": "gkpzny69xcjg7sww",
+        "BT_PRIVATE_KEY": "6a032e2908df8716fd9c4b19aeb88e34",
+        "BT_MERCHANT_ID": "nrqc9pcqt9s9drgz",
+        "BT_MASTER_MERCHANT_ACCOUNT_ID": "6j864kq8t47d2sj2"
+    },
+    "AWSAccessKeyId": "AKIAJEMIYIBBLTAZANYQ",
+    "AWSSecretAccessKey": "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",
+    "AWSRegion": "us-east-1",
+    "mailgun": {
+        "username": "postmaster@sandbox6a2974fee1684d928e13cff61c61b513.mailgun.org",
+        "password": "a9a4ebbbae9056050acd111a684242e5",
+        "server": "smtp.mailgun.com"
+    },
+    "twilio": {
+        "pub": "ACa546052edcae5ae41ba1e2931b4754f3",
+        "priv": "39a1d4df7d98776ab7ee44d8239db778",
+        "baseUrl": "http://habitat-market.ngrok.io",
+        "twilioPhone": 2055610283
+    },
+    "phaxio": {
+        "pub": "5b0e786a7090f0206e57392fa5dee792885bfe58",
+        "priv": "04556effc1435a2b14295499357587429d5148f6"
+    },
+    "slackToken": "xoxp-5035054269-5013398260-125125457156-69229627575c2ed0b35eddb954913e91"
+}

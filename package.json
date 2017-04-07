@@ -3,10 +3,21 @@
   "private": true,
   "scripts": {
     "start": "meteor run",
-    "install-packages": "meteor npm install --save babel-runtime"
+    "install-packages": "meteor --version && meteor npm install --save babel-runtime phaxio json-2-csv phone-formatter valid-url html5sortable basiccontext digitalocean image-downloader uploadcare random-color twilio"
   },
   "dependencies": {
     "babel-runtime": "^6.23.0",
-    "meteor-node-stubs": "~0.2.4"
+    "basiccontext": "^3.5.1",
+    "digitalocean": "^0.9.1",
+    "html5sortable": "^0.4.5",
+    "image-downloader": "^3.0.0",
+    "json-2-csv": "^2.1.0",
+    "meteor-node-stubs": "~0.2.4",
+    "phaxio": "^0.1.0",
+    "phone-formatter": "0.0.2",
+    "random-color": "^1.0.1",
+    "twilio": "^2.11.1",
+    "uploadcare": "^0.4.3",
+    "valid-url": "^1.0.9"
   }
 }
