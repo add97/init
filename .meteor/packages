@@ -27,7 +27,6 @@ aldeed:simple-schema
 aldeed:collection2
 habitat-tasks
 random
-matteodem:easy-search
 
 app-state
 background-geolocation
@@ -48,3 +47,4 @@ habitat-weeks
 habitat-meals
 habitat-environment
 habitat-runner
+matteodem:easy-search@=1.6.4
