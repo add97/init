@@ -3,6 +3,8 @@ import { Template } from 'meteor/templating';
 
 import './task.html';
 
+Router.route('/register');
+
 Template.task.helpers({
   isOwner() {
     return this.owner === Meteor.userId();
