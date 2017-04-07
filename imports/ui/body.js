@@ -10,12 +10,6 @@ Template.body.onCreated(function bodyOnCreated() {
   Meteor.subscribe('tasks');
 });
 
-Tracker.autorun(function(){
-  debugger;
-  count = Tasks.find().count();
-  console.log(`there are ${count} tasks`);
-});
-
 Template.body.helpers({
   tasks() {
     const instance = Template.instance();

@@ -26,4 +26,4 @@ mdg:validated-method
 aldeed:simple-schema
 habitat-tasks
 random
-matteodem:easy-search
+matteodem:easy-search@=1.6.4

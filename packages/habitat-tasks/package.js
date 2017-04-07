@@ -8,7 +8,7 @@ Package.onUse(function (api) {
   api.use('underscore');
   api.use('ecmascript');
   api.use('mongo');
-  api.use('matteodem:easy-search');
+  api.use('matteodem:easy-search@=1.6.4');
   api.use('check');
   api.use('aldeed:collection2');
   api.use('aldeed:simple-schema');

@@ -3,6 +3,9 @@
     <header>
       <h1>Todo List ({{incompleteCount}})</h1>
 
+      {{> esInput index="users" placeholder="Search for users" class="userPanel__left-search"}}
+
+
       <label class="hide-completed">
         <input type="checkbox" />
         Hide Completed Tasks
@@ -18,9 +21,16 @@
     </header>
 
     <ul>
-      {{#each tasks}}
-        {{> task}}
-      {{/each}}
+      {{#ifEsInputIsEmpty index="users"}}
+        {{#each tasks}}
+          {{> task}}
+        {{/each}}
+        {{else}}
+        {{#esEach index="users"}}
+          {{> task}}
+        {{/esEach}}
+
+      {{/ifEsInputIsEmpty}}
     </ul>
   </div>
 </body>
