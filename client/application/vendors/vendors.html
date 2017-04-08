@@ -1,0 +1,10 @@
+<template name="vendors">
+  {{#each vendors}}
+  <ul class="list-group">
+    <li class="list-group-item">
+      <span class="badge">{{transactionCount}}</span>
+      <span class="text"><strong>{{company_name}}</strong> - {{company_email}} ({{company_address}})</span>
+    </li>
+  </ul>
+  {{/each}}
+</template>

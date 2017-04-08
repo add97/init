@@ -20,6 +20,7 @@ shell-server@0.2.3            # Server-side component of the `meteor shell` comm
 reactive-dict
 accounts-ui
 accounts-password
+momentjs:moment
 tunifight:loggedin-mixin
 mdg:validated-method
 aldeed:simple-schema
@@ -31,7 +32,7 @@ background-geolocation
 combined-location
 font-awesome-plus
 force-ssl
-
+twbs:bootstrap
 habitat-calc
 habitat-categories
 habitat-featured
@@ -41,7 +42,7 @@ habitat-tasks
 habitat-settings
 habitat-support
 habitat-transactions
-
+habitat-vendors
 habitat-weeks
 habitat-meals
 habitat-environment

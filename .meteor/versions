@@ -2,6 +2,7 @@ accounts-base@1.2.16
 accounts-password@1.3.5
 accounts-ui@1.1.9
 accounts-ui-unstyled@1.2.1
+alanning:roles@1.0.6
 aldeed:collection2@2.10.0
 aldeed:collection2-core@1.2.0
 aldeed:schema-deny@1.1.0
@@ -53,6 +54,7 @@ habitat-settings@1.0.6
 habitat-support@1.1.3
 habitat-tasks@1.0.0
 habitat-transactions@1.0.6
+habitat-vendors@1.0.6
 habitat-weeks@1.2.0
 hot-code-push@1.0.4
 html-tools@1.0.11
@@ -125,6 +127,7 @@ templating-runtime@1.3.2
 templating-tools@1.1.2
 tracker@1.1.2
 tunifight:loggedin-mixin@0.1.0
+twbs:bootstrap@3.3.6
 ui@1.0.13
 underscore@1.0.10
 url@1.1.0
