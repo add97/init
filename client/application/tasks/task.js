@@ -46,6 +46,6 @@ Template.tasks.events({
     });
   },
   'change .hide-completed input'(event, instance) {
-    instance.state.set('hideCompleted', event.target.checked);
+    state.set('hideCompleted', event.target.checked);
   },
 });

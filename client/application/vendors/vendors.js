@@ -3,7 +3,5 @@ Template.vendors.onCreated(function(){
 });
 
 Template.vendors.helpers({
-  vendors(){
-    return businessProfiles.find({}, {sort: {transactionCount: -1}});
-  },
+  vendors(){ return businessProfiles.find({}, {sort: {transactionCount: -1}}); },
 });
