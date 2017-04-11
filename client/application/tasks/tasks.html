@@ -1,0 +1,41 @@
+<template name="tasks">
+  <!-- <label class="hide-completed">
+    <input type="checkbox" />
+    Hide Completed Tasks
+  </label> -->
+
+  {{#if currentUser}}
+  <div class="form-group">
+    <label class="control-label">Add a task</label>
+    <div class="input-group">
+      <input type="text" class="form-control">
+      <span class="input-group-btn">
+        <button class="btn btn-default new_task_submit" type="button">Button</button>
+      </span>
+    </div>
+  </div>
+  {{/if}}
+
+  <ul>
+    {{#ifEsInputIsEmpty index="tasks"}}
+      {{#each tasks}}
+        {{> task}}
+      {{/each}}
+      {{else}}
+      {{#esEach index="tasks"}}
+        {{> task}}
+      {{/esEach}}
+    {{/ifEsInputIsEmpty}}
+  </ul>
+</template>
+
+<template name="task">
+  <ul class="list-group">
+    <li class="list-group-item {{#if checked}}checked{{/if}}">
+      <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
+      <button class="delete">&times;</button>
+      <span class="badge">{{created}}</span>
+      <span class="text"><strong>{{username}}</strong> - {{text}}</span>
+    </li>
+  </ul>
+</template>

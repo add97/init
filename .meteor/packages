@@ -16,10 +16,12 @@ standard-minifier-js@1.2.3    # JS minifier run for production mode
 es5-shim@4.6.15                # ECMAScript 5 compatibility for older browsers.
 ecmascript@0.6.3              # Enable ECMAScript2015+ syntax in app code
 shell-server@0.2.3            # Server-side component of the `meteor shell` command
-
+jquery
+twbs:bootstrap
 reactive-dict
 accounts-ui
 accounts-password
+momentjs:moment
 tunifight:loggedin-mixin
 mdg:validated-method
 aldeed:simple-schema
@@ -31,7 +33,6 @@ background-geolocation
 combined-location
 font-awesome-plus
 force-ssl
-
 habitat-calc
 habitat-categories
 habitat-featured
@@ -41,7 +42,7 @@ habitat-tasks
 habitat-settings
 habitat-support
 habitat-transactions
-
+habitat-vendors
 habitat-weeks
 habitat-meals
 habitat-environment
