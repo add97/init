@@ -15,7 +15,7 @@
         <ul class="nav navbar-nav">
 
 
-          <li class="{{isActive 'home'}}">
+          <li class="{{routeName 'home'}}">
             <a href="{{pathFor route='home'}}">
               Home
               <span class="sr-only">(current)</span>
@@ -23,11 +23,11 @@
           </li>
 
 
-          <li class="{{isActive 'tasks'}}">
+          <li class="{{routeName 'tasks'}}">
             <a href="{{pathFor route='tasks'}}">Tasks</a>
           </li>
 
-          <li class="{{isActive 'vendors'}}">
+          <li class="{{routeName 'vendors'}}">
             <a href="{{pathFor route='vendors'}}">Vendors</a>
           </li>
 
@@ -47,15 +47,16 @@
         <form class="navbar-form navbar-left" role="search">
           <div class="form-group">
             <!-- TODO: refactor into a single helper that returns the esInput template dynamically -->
-            {{#if checkRoute 'tasks'}}
+            {{#if isActive 'tasks'}}
               {{> esInput index="tasks" placeholder="Search for tasks" class="userPanel__left-search"}}
+              <button type="submit" class="btn btn-default">Submit</button>
             {{/if}}
 
-            {{#if checkRoute 'vendors'}}
+            {{#if isActive 'vendors'}}
               {{> esInput index="businessprofiles" placeholder="Search for vendors" class="userPanel__left-search"}}
+              <button type="submit" class="btn btn-default">Submit</button>
             {{/if}}
           </div>
-          <button type="submit" class="btn btn-default">Submit</button>
         </form>
         <ul class="nav navbar-nav navbar-right">
           <li>{{> loginButtons}}</li>

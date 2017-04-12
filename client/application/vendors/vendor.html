@@ -8,20 +8,20 @@
           <input type="text" class="form-control" id="company_name" placeholder="Company name" value="{{this.company_name}}">
         </div>
       </div>
-      <div class="form-group">
+      <div class="form-group {{isEdited 'company_email'}}">
         <label for="inputEmail" class="col-lg-2 control-label">Company Email</label>
         <div class="col-lg-10">
           <input type="text" class="form-control" id="company_email" placeholder="Company email" value="{{this.company_email}}">
         </div>
       </div>
-      <div class="form-group">
+      <div class="form-group {{isEdited 'company_address'}}">
         <label for="inputEmail" class="col-lg-2 control-label">Company Address</label>
         <div class="col-lg-10">
           <input type="text" class="form-control" id="company_address" placeholder="Company address" value="{{this.company_address}}">
         </div>
       </div>
       <!-- TODO: Alex - ask mike or JP how to configure the npm phone-formatter package-->
-      <div class="form-group">
+      <div class="form-group {{isEdited 'company_phone'}}">
         <label for="inputEmail" class="col-lg-2 control-label">Company Phone</label>
         <div class="col-lg-10">
           <input type="text" class="form-control" id="company_phone" placeholder="Company phone" value="{{this.company_phone}}">
