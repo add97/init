@@ -1,12 +1,5 @@
-import { Meteor } from 'meteor/meteor';
 
-Meteor.startup(() => {
-  // code to run on server at startup
-});
-
-getKey = (text) => {
-  return `${text}${Random.id()}`
-};
+getKey = (text) => { return `${text}${Random.id()}`; };
 
 Meteor.publish('vendors', function(){
   return businessProfiles.find({}, {
@@ -17,4 +10,11 @@ Meteor.publish('vendors', function(){
       company_email: 1,
     }
   });
+});
+//either works
+// return businessProfiles.find({_id: bizId}
+// return businessProfiles.find(bizId
+
+Meteor.publish('vendor', function(bizId){
+  return businessProfiles.find({_id: bizId});
 });
