@@ -1,10 +1,16 @@
 <template name="vendors">
-  {{#each vendors}}
   <ul class="list-group">
-    <li class="list-group-item">
-      <span class="badge">{{transactionCount}}</span>
-      <span class="text"><strong>{{company_name}}</strong> - {{company_email}} ({{company_address}})</span>
-    </li>
+    {{#ifEsInputIsEmpty index="businessprofiles"}}
+      {{#each vendors}} {{> vendor}} {{/each}}
+    {{else}}
+      {{#esEach index="businessprofiles"}} {{> vendor}} {{/esEach}}
+    {{/ifEsInputIsEmpty}}
   </ul>
-  {{/each}}
+</template>
+
+<template name="vendor">
+  <li class="list-group-item">
+    <span class="badge">{{transactionCount}}</span>
+    <span class="text"><strong>{{company_name}}</strong> - {{company_email}} ({{company_address}})</span>
+  </li>
 </template>

@@ -1,0 +1,120 @@
+<template name="vendorInfo">
+  <form class="form-horizontal">
+    <fieldset>
+      <legend>{{this.company_name}}</legend>
+      <div class="form-group {{isEdited 'company_name'}}">
+        <label for="inputEmail" class="col-lg-2 control-label">Name</label>
+        <div class="col-lg-10">
+          <input type="text" class="form-control" id="company_name" placeholder="Company name" value="{{this.company_name}}">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputEmail" class="col-lg-2 control-label">Company Email</label>
+        <div class="col-lg-10">
+          <input type="text" class="form-control" id="company_email" placeholder="Company email" value="{{this.company_email}}">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputEmail" class="col-lg-2 control-label">Company Address</label>
+        <div class="col-lg-10">
+          <input type="text" class="form-control" id="company_address" placeholder="Company address" value="{{this.company_address}}">
+        </div>
+      </div>
+      <!-- TODO: Alex - ask mike or JP how to configure the npm phone-formatter package-->
+      <div class="form-group">
+        <label for="inputEmail" class="col-lg-2 control-label">Company Phone</label>
+        <div class="col-lg-10">
+          <input type="text" class="form-control" id="company_phone" placeholder="Company phone" value="{{this.company_phone}}">
+        </div>
+      </div>
+      <div class="form-group">
+
+      <label for="select" class="col-lg-2 control-label">Contact Method</label>
+        <div class="col-lg-10">
+          <select class="form-control" id="select">
+            <option>App</option>
+            <option>SMS</option>
+            <option>Email</option>
+            <option>Fax</option>
+            <option>Receipt Printer</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- <div class="form-group">
+        <label class="col-lg-2 control-label">Radio</label>
+        <div class="col-lg-10">
+          <div class="radio">
+            <label>
+              <input type="radio" name="app" id="app" value="app" checked="">
+              Opt 1
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="sms" id="sms" value="sms" checked="">
+              2
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="fax" id="fax" value="fax" checked="">
+              3
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="email" id="email" value="email" checked="">
+              4
+            </label>
+          </div>
+
+        </div>
+      </div> -->
+      <div class="form-group">
+        <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+        <div class="col-lg-10">
+          <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox"> Checkbox
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="textArea" class="col-lg-2 control-label">Textarea</label>
+        <div class="col-lg-10">
+          <textarea class="form-control" rows="3" id="textArea"></textarea>
+          <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="select" class="col-lg-2 control-label">Contact Method</label>
+        <div class="col-lg-10">
+          <select class="form-control" id="select">
+            <option>App</option>
+            <option>SMS</option>
+            <option>Email</option>
+            <option>Fax</option>
+            <option>Receipt Printer</option>
+          </select>
+          <br>
+          <select multiple="" class="form-control">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-lg-10 col-lg-offset-2">
+          <button type="reset" class="btn btn-default">Cancel</button>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+</template>
