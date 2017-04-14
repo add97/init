@@ -1,6 +1,8 @@
 Template.navigation.helpers({
   routeName(){
-    return !Router.current() ? false : Router.current().options.route.getName();
+    route = !Router.current() ? false : Router.current().options.route.getName();
+    debugger;
+    return route;
   },
   checkRoute(routeName){
     if(!Router.current()){
