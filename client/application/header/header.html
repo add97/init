@@ -15,19 +15,18 @@
         <ul class="nav navbar-nav">
 
 
-          <li class="{{routeName 'home'}}">
+          <li class="{{isActive 'home'}}">
             <a href="{{pathFor route='home'}}">
               Home
               <span class="sr-only">(current)</span>
             </a>
           </li>
 
-
-          <li class="{{routeName 'tasks'}}">
+          <li class="{{isActive 'tasks'}}">
             <a href="{{pathFor route='tasks'}}">Tasks</a>
           </li>
 
-          <li class="{{routeName 'vendors'}}">
+          <li class="{{isActive 'vendors'}}">
             <a href="{{pathFor route='vendors'}}">Vendors</a>
           </li>
 
