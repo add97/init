@@ -1,4 +1,12 @@
 {
+  "galaxy.meteor.com": {
+    "env": {
+      "ROOT_URL": "https://sales.tryhabitat.com",
+      "MONGO_URL": "mongodb://DEVhabitat_mike:Mpasz1992@candidate.51.mongolayer.com:11013,candidate.40.mongolayer.com:11053/habitat-dev?replicaSet=set-56f179067e7f0cc711000dad",
+      "MONGO_OPLOG_URL": "mongodb://devoplog_mike:Mpasz1992@candidate.51.mongolayer.com:11013,candidate.40.mongolayer.com:11053/local?authSource=habitat-dev&replicaSet=set-56f179067e7f0cc711000dad",
+      "MAIL_URL": "smtp://postmaster@mail.tryhabitat.com:Mpasz1992@smtp.mailgun.org:465"
+    }
+  },
     "public": {
         "mapboxKey": "pk.eyJ1IjoiaGFiaXRhdG1pa2UiLCJhIjoiY2lsdHVpMWQxMDBjdnVza3NyNnV6Y3N3NCJ9.dWupCOy48vAo8BocejIdtg",
         "phone": "2015645379",

@@ -25,7 +25,7 @@ mdg:validated-method
 aldeed:simple-schema
 aldeed:collection2
 random
-
+percolate:migrations
 
 app-state
 background-geolocation

@@ -65,6 +65,11 @@ Template.vendorInfo.helpers({
       return dbVal !== inputVal ? 'has-warning' : false;
     }
   },
+  companyType(){
+    types = businessProfiles.schema._schema.company_type.allowedValues;
+    debugger;
+    return types;
+  }
 });
 
 function phoneFormat(input){

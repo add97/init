@@ -48,11 +48,9 @@
         <label for="select" class="col-lg-2 control-label">Company Type</label>
           <div class="col-lg-10">
             <select class="form-control" id="select">
-              <option>Type 1</option>
-              <option>Type 2</option>
-              <option>Type 3</option>
-              <option>Type 4</option>
-              <option>Type 5</option>
+              {{#each companyType}}
+                <option>{{this}}</option>
+              {{/each}}
             </select>
           </div>
       </div>
