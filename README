@@ -1,0 +1,37 @@
+TODOS:
+
+1. write client side alert Object
+2. Add fields
+    Booleans
+      - DaaS
+      - Direct deposit
+      - Catering
+      - habitat exclusive
+
+    Dropdown
+      - Company Type
+
+    Checkbox
+      - Available Habitats
+
+    Inputs
+      - Password (w/ mike)
+      - orderPhone
+      - ownerPhone
+      - if orderType
+          app
+            habitatOwnsTablet true / false
+              if true, serial number input box
+          fax
+            faxPhone input
+
+    Input + select multiple
+      - categories
+
+Steps:
+  1. Check schema, add field if neccesary
+  2. Add front end from https://bootswatch.com/flatly/
+  3. Apply helper and give DOM element corresponding id
+  4. (Optional) Write event to handle update
+  5. (Optional) Write method if needed
+  6. Handle error / success accordingly

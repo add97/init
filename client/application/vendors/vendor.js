@@ -2,10 +2,7 @@
 //   Each time we 'set' a new value, our helpers know to rerun and update the view
 Template.vendorInfo.onCreated(function(){
   Meteor.subscribe('vendor', this.data._id);
-  this.state = new ReactiveDict({
-    'company_name': this.data.company_name
-    //register additional properties here
-  });
+  this.state = new ReactiveDict();
 });
 
 //2. Register an event that updates the template's state on each keyup event
@@ -17,6 +14,28 @@ Template.vendorInfo.events({
     //set the field specified with the element's ID with our changed value in our 'state'
     t.state.set(field, value);
     console.log(`Change recorded! ${field} now equals ${value} on vendorInfo.state`);
+  },
+  'submit .vendor-info'(e, t){
+    e.preventDefault();
+    Meteor.call('updateProfile', this._id, t.state.all(), (err) => {
+      if(err){
+        Bert.alert({
+          title: 'Uh-oh!',
+          message: err.reason,
+          type: 'danger',
+          style: 'growl-top-right',
+          icon: 'fa-warning'
+        });
+      } else {
+        Bert.alert({
+          title: 'Success',
+          message: `${this.company_name} has been updated`,
+          type: 'success',
+          style: 'growl-top-right',
+          icon: 'fa-success'
+        });
+      }
+    });
   }
 });
 

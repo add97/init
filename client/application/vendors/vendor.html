@@ -1,11 +1,11 @@
 <template name="vendorInfo">
-  <form class="form-horizontal">
+  <form class="form-horizontal vendor-info">
     <fieldset>
       <legend>{{this.company_name}}</legend>
       <div class="form-group {{isEdited 'company_name'}}">
         <label for="inputEmail" class="col-lg-2 control-label">Name</label>
         <div class="col-lg-10">
-          <input type="text" class="form-control" id="company_name" placeholder="Company name" value="{{this.company_name}}">
+          <input type="text" class="form-control" id="company_name" placeholder="Company name" defaultValue="{{this.company_name}}" value="{{this.company_name}}">
         </div>
       </div>
       <div class="form-group {{isEdited 'company_email'}}">
