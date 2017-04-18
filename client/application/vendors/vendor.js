@@ -18,6 +18,7 @@ Template.vendorInfo.events({
   'submit .vendor-info'(e, t){
     e.preventDefault();
     Meteor.call('updateProfile', this._id, t.state.all(), (err) => {
+      debugger;
       if(err){
         Bert.alert({
           title: 'Uh-oh!',
@@ -54,7 +55,7 @@ Template.vendorInfo.helpers({
     //see http://stackoverflow.com/a/4968460
     const dbVal = this[value]; //e.g value will be company_name, etc.
 
-
+    debugger;
     //if state isn't there yet, just return false and do nothing
     if(!inputVal){
       return false;
@@ -63,7 +64,7 @@ Template.vendorInfo.helpers({
       //if template's state doesn't match DB, add warning class to input element
       return dbVal !== inputVal ? 'has-warning' : false;
     }
-  }
+  },
 });
 
 function phoneFormat(input){

@@ -3,7 +3,7 @@
     <fieldset>
       <legend>{{this.company_name}}</legend>
       <div class="form-group {{isEdited 'company_name'}}">
-        <label for="inputEmail" class="col-lg-2 control-label">Name</label>
+        <label for="inputName" class="col-lg-2 control-label">Name</label>
         <div class="col-lg-10">
           <input type="text" class="form-control" id="company_name" placeholder="Company name" defaultValue="{{this.company_name}}" value="{{this.company_name}}">
         </div>
@@ -15,16 +15,27 @@
         </div>
       </div>
       <div class="form-group {{isEdited 'company_address'}}">
-        <label for="inputEmail" class="col-lg-2 control-label">Company Address</label>
+        <label for="inputAddress" class="col-lg-2 control-label">Company Address</label>
         <div class="col-lg-10">
           <input type="text" class="form-control" id="company_address" placeholder="Company address" value="{{this.company_address}}">
         </div>
       </div>
-      <!-- TODO: Alex - ask mike or JP how to configure the npm phone-formatter package-->
       <div class="form-group {{isEdited 'company_phone'}}">
-        <label for="inputEmail" class="col-lg-2 control-label">Company Phone</label>
+        <label for="inputCompanyPhone" class="col-lg-2 control-label">Company Phone</label>
         <div class="col-lg-10">
           <input type="text" class="form-control" id="company_phone" placeholder="Company phone" value="{{this.company_phone}}">
+        </div>
+      </div>
+      <div class="form-group {{isEdited 'orderPhone'}}">
+        <label for="inputOrderPhone" class="col-lg-2 control-label">Order Phone</label>
+        <div class="col-lg-10">
+          <input type="number" class="form-control" id="orderPhone" placeholder="Order phone" value="{{this.orderPhone}}">
+        </div>
+      </div>
+      <div class="form-group {{isEdited 'DaaS'}}">
+        <label for="inputDaaS" class="col-lg-2 control-label">DaaS</label>
+        <div class="col-lg-10">
+          <input type="checkbox" class="form-control" id="DaaS" value="{{this.DaaS}}">
         </div>
       </div>
       <div class="form-group">
