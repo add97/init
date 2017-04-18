@@ -18,7 +18,6 @@ Template.vendorInfo.events({
   'submit .vendor-info'(e, t){
     e.preventDefault();
     Meteor.call('updateProfile', this._id, t.state.all(), (err) => {
-      debugger;
       if(err){
         Bert.alert({
           title: 'Uh-oh!',
