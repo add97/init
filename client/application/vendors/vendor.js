@@ -46,16 +46,17 @@ Template.vendorInfo.events({
 Template.vendorInfo.helpers({
   isEdited(value){
     const state = Template.instance().state; //helper argument needs to match the targeted input's HTML id!
-    const inputVal = state.get(value); //what our input says the new value is
 
+    let inputVal = state.get(value); //what our input says the new value is
 
+    if(value && value === 'orderPhone' && state.get(value)){
+      inputVal = parseFloat(state.get(value));
+    }
     //what the database has stored as the value.
     //Note: this[value] is same as this.value, but called 'bracket notation'
     //bracket notation is used when accessing a dynamic property passed in as a function's argument
     //see http://stackoverflow.com/a/4968460
     const dbVal = this[value]; //e.g value will be company_name, etc.
-
-    debugger;
     //if state isn't there yet, just return false and do nothing
     if(!inputVal){
       return false;
