@@ -32,15 +32,14 @@
           <input type="text" class="form-control" id="orderPhone" placeholder="Order phone" value="{{this.orderPhone}}">
         </div>
       </div>
-      <div class="form-group">
-        <label for="select" class="col-lg-2 control-label">Contact Method</label>
-          <div class="col-lg-10">
+      <!-- Dropdowns aren't updating -->
+      <div class="form-group {{isEdited 'notificationPreference'}}">
+        <label for="select" class="col-lg-2 control-label">Notification Preference</label>
+          <div class="col-lg-10" id="notificationPreference">
             <select class="form-control" id="select">
-              <option>App</option>
-              <option>SMS</option>
-              <option>Email</option>
-              <option>Fax</option>
-              <option>Receipt Printer</option>
+              {{#each contactMethod}}
+                <option>{{this}}</option>
+              {{/each}}
             </select>
           </div>
       </div>

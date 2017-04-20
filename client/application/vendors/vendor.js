@@ -45,7 +45,7 @@ Template.vendorInfo.events({
 Template.vendorInfo.helpers({
   isEdited(value){
     const state = Template.instance().state; //helper argument needs to match the targeted input's HTML id!
-
+    debugger;
     let inputVal = state.get(value); //what our input says the new value is
 
     if(value && value === 'orderPhone' && state.get(value)){
@@ -55,6 +55,7 @@ Template.vendorInfo.helpers({
     //Note: this[value] is same as this.value, but called 'bracket notation'
     //bracket notation is used when accessing a dynamic property passed in as a function's argument
     //see http://stackoverflow.com/a/4968460
+    debugger;
     const dbVal = this[value]; //e.g value will be company_name, etc.
     //if state isn't there yet, just return false and do nothing
     if(!inputVal){
@@ -65,9 +66,12 @@ Template.vendorInfo.helpers({
       return dbVal !== inputVal ? 'has-warning' : false;
     }
   },
+  contactMethod(){
+    preferences = businessProfiles.schema._schema.notificationPreference.allowedValues;
+    return preferences;
+  },
   companyType(){
     types = businessProfiles.schema._schema.company_type.allowedValues;
-    debugger;
     return types;
   }
 });
